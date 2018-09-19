@@ -26,6 +26,12 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends Activity {
 
+    // Only for testing
+    String url = "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22";
+
+    // Use your own API key
+    // String url = "https://api.openweathermap.org/data/2.5/weather?q=london,uk,us&appid=b6907d289e10d714a6e88b30761fae22&units=metric";
+
     @BindView(R.id.temperatureTextView)
     TextView temperatureTextView;
 
@@ -93,10 +99,6 @@ public class MainActivity extends Activity {
     private void updateWeather() {
 
         displayCurrentDate();
-
-        // Use your own API key
-//        String url = "https://api.openweathermap.org/data/2.5/weather?q=london,uk,us&appid=b6907d289e10d714a6e88b30761fae22&units=metric";
-        String url = "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22";
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                 (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
