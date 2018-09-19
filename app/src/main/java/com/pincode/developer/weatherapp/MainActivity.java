@@ -26,11 +26,20 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends Activity {
 
-    // Only for testing
-    String url = "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22";
+    private String cityName = "London";
+    private String countryName = "UK";
+    private  String temperatureUnit = "metric";
 
-    // Use your own API key
-    // String url = "https://api.openweathermap.org/data/2.5/weather?q=london,uk,us&appid=b6907d289e10d714a6e88b30761fae22&units=metric";
+    // Only for test
+    private String apiKey = "b6907d289e10d714a6e88b30761fae22";
+
+    private String url = "https://samples.openweathermap.org/data/2.5/weather?q=" +
+            cityName + "," + countryName + "&appid=" + apiKey;
+
+    // For production, use your own API key
+    // String url = "https://api.openweathermap.org/data/2.5/weather?q=" +
+    //        cityName + "," + countryName + "&appid=" + apiKey + "&units=" + temperatureUnit;
+
 
     @BindView(R.id.temperatureTextView)
     TextView temperatureTextView;
