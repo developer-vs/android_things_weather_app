@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/cityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="City" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cityTextView"
+        android:layout_centerHorizontal="true"
+        tools:text="Date" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/temperatureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateTextView"
+        android:layout_toStartOf="@+id/temperatureUnitTextView"
+        android:text="@string/dash_dash"
+        android:textSize="120sp" />
+
+    <TextView
+        android:id="@+id/temperatureUnitTextView"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/linearLayout"
+        android:layout_toStartOf="@+id/view"
+        android:text="@string/unit_temperature"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/blanktemperatureUnitTextView"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/temperatureUnitTextView"
+        android:layout_toEndOf="@+id/view"
+        android:text=""
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/dateTextView"
+        android:layout_toEndOf="@+id/blanktemperatureUnitTextView"
+        android:gravity="top|center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/weatherIconImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icon_broken_clouds"
+            tools:text="City" />
+
+
+        <TextView
+            android:id="@+id/weatherDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            tools:text="Weather Description" />
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

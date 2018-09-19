@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="on_error_response">That didn\'t work!</string>
+    <string name="response">Response is:</string>
+    <string name="unit_temperature">°K</string>
+    <string name="dash_dash">--</string>
+</resources>
